@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "stl-tools"
+name = "ritn3d-stl-tools"
 version = "0.1.0"
-description = "Prepare STL meshes for 3D printing — manifold repair, flat base, scale normalization, slicer-ready output."
+description = "Prepare STL meshes for 3D printing — manifold repair, flat base, scale normalization, slicer-ready output. By the Ritn3D team."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
