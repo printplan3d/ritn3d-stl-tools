@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stl-tools"
+version = "0.1.0"
+description = "Prepare STL meshes for 3D printing — manifold repair, flat base, scale normalization, slicer-ready output."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ritn3D Team" }]
+keywords = [
+    "stl",
+    "3d-printing",
+    "mesh-repair",
+    "manifold",
+    "slicer",
+    "trimesh",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Multimedia :: Graphics :: 3D Modeling",
+    "Topic :: Scientific/Engineering",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "trimesh>=4.0,<5.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/printplan3d/stl-tools"
+Issues = "https://github.com/printplan3d/stl-tools/issues"
+
+[project.scripts]
+stl-tools = "stl_tools.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
